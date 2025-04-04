@@ -44,7 +44,7 @@ H2 = zeros(p, N-1);            % Matrix for free response contribution
 
 % Fill H1 matrix with shifted impulse response for control horizon
 for i = 1:m
-    H1(:, 1) = [zeros(i-1, 1); h(1:p-i+1)];  % Shifted impulse response
+    H1(:, i) = [zeros(i-1, 1); h(1:p-i+1)];  % Shifted impulse response
 end
 
 % Fill H2 matrix with reversed impulse response for free response
