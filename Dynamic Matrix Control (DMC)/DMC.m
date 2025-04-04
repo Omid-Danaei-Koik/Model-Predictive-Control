@@ -44,7 +44,7 @@ sysdisi = step(system_dis);
 % Initialize G matrix for control input contribution in DMC
 G = zeros(p, m);               % Dynamic matrix for control increments
 for i = 1:m
-    G(:, 1) = [zeros(i-1, 1); h(1:p-i+1)];  % Shifted step response
+    G(:, i) = [zeros(i-1, 1); h(1:p-i+1)];  % Shifted step response
 end
 
 % Initialize H matrix for free response contribution in DMC
